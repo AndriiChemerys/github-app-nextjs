@@ -4,7 +4,6 @@ import Link from "next/link"
 import {useState} from 'react'
 import {useRouter} from "next/router"
 
-
 export default function Home() {
 const router = useRouter();
 const [inputValue, setInputValue] = useState('')
@@ -29,7 +28,7 @@ const handleButtonClick = (e) => {
       <div className='m-4 border-2 border-gray-500 p-2'>
         <form>
           <input type="text" placeholder='Search' value={inputValue} onChange={handleInputChange} className="w-full border-gray-300 rounded"/>
-          <button type="button" onClick={handleButtonClick}>Send</button>
+          <button type="button" className="bg-red-400 w-full my-3 text-white" onClick={handleButtonClick}>Send</button>
         </form>
       </div>
     </Main>
