@@ -1,4 +1,5 @@
 import Head from "next/head"
+import {useState} from 'next/head'
 
 import Main from "@/components/layouts/main"
 
