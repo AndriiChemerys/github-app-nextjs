@@ -9,7 +9,7 @@ export default function ResultsPage({title}) {
       <Head>
       <title>Results page for {title}</title>
       </Head>
-      <h1> Hello Results </h1>
+      <h1> Hello Results {title} </h1>
     </Main>
   )
 }
@@ -20,7 +20,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      title: 'Bicycle'
+      title: context.params.query
     },
   }
 }

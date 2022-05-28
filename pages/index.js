@@ -15,19 +15,20 @@ const handleInputChange = (e) => {
 
 const handleButtonClick = (e) => {
   e.preventDefault();
-  router.push('/results')
-}
 
-console.log(inputValue)
+  if(inputValue.length < 3) return alert('Wystapil blad')
+
+  router.push(`/results/${inputValue}`)
+}
 
   return (
     <Main>
       <Head>
         <title>index page</title>
       </Head>
-      <div className='m-4'>
+      <div className='m-4 border-2 border-gray-500 p-2'>
         <form>
-          <input type="text" placeholder='Search' value={inputValue} onChange={handleInputChange}/>
+          <input type="text" placeholder='Search' value={inputValue} onChange={handleInputChange} className="w-full border-gray-300 rounded"/>
           <button type="button" onClick={handleButtonClick}>Send</button>
         </form>
       </div>
